@@ -27,3 +27,18 @@
 .donation--visible .donation-panel {
   transform: translateX(0);
 }
+
+.iframe-container {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  position: fixed;
+  top: 70px;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+
+.iframe {
+  height: 100%;
+  width: 100%;
+}
