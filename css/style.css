@@ -2,6 +2,24 @@
   font-family: 'Rubik', sans-serif;
  }
 
+.bg {
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+@media screen and (min-width:30em) {
+  .bg-ns {
+     background-image: url(../img/bg.jpg);
+     background-size: cover;
+     background-position: center top;
+     background-repeat: no-repeat;
+     z-index: -1;
+  }
+}
+
 .donation {
   pointer-events: none;
 }

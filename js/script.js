@@ -3,11 +3,15 @@ $(function() {
   var documentHeight = $(document).height();
   var colorTransitionBegin = Math.ceil(documentHeight / 4);
   var maxDifference = Math.ceil(documentHeight / 3);
-  $(window).scroll(function(){
-    var scrollTop = $(window).scrollTop();
-    var opacity = 1 - Math.max((scrollTop - colorTransitionBegin) / maxDifference, 0);
-    $('#bg').css('opacity', opacity);
-  });
+  if ($('#bg').css('backgroundImage') !== "none") {
+    $(window).scroll(function(){
+      var scrollTop = $(window).scrollTop();
+      var opacity = 1 - (scrollTop - colorTransitionBegin) / maxDifference;
+      opacity = Math.max(opacity, 0);
+      opacity = Math.min(opacity, 1);
+      $('#bg').css('opacity', opacity);
+    });
+  }
 
   // Interaction: Open donation panel
   var donationLink = $('#donate-button').attr('href');
